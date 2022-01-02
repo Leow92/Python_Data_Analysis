@@ -23,7 +23,7 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 
 app = Flask(__name__)
-df = pd.read_csv('C:/Users/lrbae/OneDrive/Bureau/S7/Python Data Analysis/diabetic_data.csv')
+df=pd.read_csv('https://github.com/Leow92/Python_Data_Analysis/raw/main/diabetic_data.csv')
 
 
 df.replace('No',0)
