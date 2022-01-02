@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<body style="font-family:Calibri; background-color: #6bc8da;">
+    <h1 style="text-align: center ; color:#284279 ; text-decoration: none">{{header}}</h1>
+    <h5><a href="/">Return to principal page</a></h5>
+    <h3 ><a style="color:#284279 ; text-decoration: none">{{description}}</a></h3>
+    <div id="chart" class="chart"></div>
+</body>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript">
+    var graphs = {{graphJSON | safe}};
+    Plotly.plot('chart',graphs,{});        
+</script>
+</html>
