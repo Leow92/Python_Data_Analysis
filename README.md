@@ -1,4 +1,4 @@
-# Python_Data_Analysis Diabetes
+# Data Analysis Diabetes
 Analysis of data about the readmission or not of diabetic patients
 
 Our goal was to clean, structure and analyze the data. We did Machine Learning on the dataset to determine if a patient would be readmitted or not.
