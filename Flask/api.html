@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title> API Diabetic Readmission </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dh/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dh/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></script>
+    </head>
+
+    <body style="background-color: #6bc8da;">
+        <center><u><h2> Readmission API Machine Learning</h2></u></center>
+
+        <form method="POST" enctype="multipart/form-data" action="/submit">
+            <div class="container" style="border: 2px solid; max-width: 700px; padding: 20px;">
+                <div class="row mb-3">
+                    <div class="col-2"><b>Gender(Male:1/Female:-1):</b></div>
+                    <div class="col-10"><input type="numbers" name="Gender" placeholder="Enter your gender" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Age(5,10,15,25,35,40,45,55,65,75,85)</b></div>
+                    <div class="col-10"><input type="numbers" name="Age" placeholder="Enter your age" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Admission type id (between 1 and 15)</b></div>
+                    <div class="col-10"><input type="numbers" name="AdmissionType" placeholder="Enter your admission type" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Admission source id (between 1 and 15)</b></div>
+                    <div class="col-10"><input type="numbers" name="AdmissionSource" placeholder="Enter your admission source" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Time in hospital in days</b></div>
+                    <div class="col-10"><input type="numbers" name="TimeInHospital" placeholder="Enter your time in hospital" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>number of lab procedures</b></div>
+                    <div class="col-10"><input type="numbers" name="NumLabProcedure" placeholder="Enter your number of laboratory procedures" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>number of procedure</b></div>
+                    <div class="col-10"><input type="numbers" name="NumProcedure" placeholder="Enter your number of procedure" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>number of medications</b></div>
+                    <div class="col-10"><input type="numbers" name="NumMedication" placeholder="Enter your number of medication" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>number outpatient</b></div>
+                    <div class="col-10"><input type="numbers" name="NumOutpatient" placeholder="Enter your number outpatient" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>number emergency</b></div>
+                    <div class="col-10"><input type="numbers" name="NumEmergency" placeholder="Enter your number of emergency" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>number inpatient</b></div>
+                    <div class="col-10"><input type="numbers" name="NumInpatient" placeholder="Enter your number inpatient" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>number diagnoses</b></div>
+                    <div class="col-10"><input type="numbers" name="NumDiagnoses" placeholder="Enter your number of dignoses" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>A1C result</b></div>
+                    <div class="col-10"><input type="numbers" name="A1Cresult" placeholder="Enter your A1C result" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Metformin (Increase:1 Steady:0 Decrease:-1 Other:-2)</b></div>
+                    <div class="col-10"><input type="numbers" name="Metformin" placeholder="Enter your metformin treatment " style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Repaglinide (Increase:1 Steady:0 Decrease:-1 Other:-2)</b></div>
+                    <div class="col-10"><input type="numbers" name="Repaglinide" placeholder="Enter your replaglinide tretment " style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Glimepiride (Increase:1 Steady:0 Decrease:-1 Other:-2)</b></div>
+                    <div class="col-10"><input type="numbers" name="Glimepiride" placeholder="Enter your Glimepiride" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Rosiglitazone (Increase:1 Steady:0 Decrease:-1 Other:-2)</b></div>
+                    <div class="col-10"><input type="numbers" name="Rosiglitazone" placeholder="Enter your Rosiglitazone" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Acarbose (Increase:1 Steady:0 Decrease:-1 Other:-2)</b></div>
+                    <div class="col-10"><input type="numbers" name="Acarbose" placeholder="Enter your Acarbose" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Miglitol (Increase:1 Steady:0 Decrease:-1 Other:-2)</b></div>
+                    <div class="col-10"><input type="numbers" name="Miglitol" placeholder="Enter your Miglitol" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Insulin (Increase:1 Steady:0 Decrease:-1 Other:-2)</b></div>
+                    <div class="col-10"><input type="numbers" name="Insulin" placeholder="Enter your Insulin" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Glipizide (Increase:1 Steady:0 Decrease:-1 Other:-2)</b></div>
+                    <div class="col-10"><input type="numbers" name="Glipizide" placeholder="Enter your Glipizide rate" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Metformin-Rosiglitazone (Increase:1 Steady:0 Decrease:-1 Other:-2)</b></div>
+                    <div class="col-10"><input type="numbers" name="MetforminRosiglitazone" placeholder="Enter your Metformin-Rosiglitazone" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Change (-1 or 1)</b></div>
+                    <div class="col-10"><input type="numbers" name="Change" placeholder="Enter your change" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Diabetes Medication (-1 or 1)</b></div>
+                    <div class="col-10"><input type="numbers" name="DiabetesMed" placeholder="Enter your Diabetes Medication" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>African american ? (0 or 1)</b></div>
+                    <div class="col-10"><input type="numbers" name="AfricanAmerican" placeholder="" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Asian ? (0 or 1)</b></div>
+                    <div class="col-10"><input type="numbers" name="Asian" placeholder="" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"><b>Caucasian ? (0 or 1)</b></div>
+                    <div class="col-10"><input type="numbers" name="Caucasian" placeholder="" style="width: 100%;"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-10"><input type="submit" value="Submit"></div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
